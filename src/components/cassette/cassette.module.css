@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Zeyada&display=swap');
+
+.zeyada {
+    font-family: "Zeyada", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }  
+.caveat {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.shell {
+    background-color: blueviolet;
+    height: 309px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+  }
+.shellContent {
+    background-color: antiquewhite;
+    height: 65%;
+    width: 90%;
+    border-radius: 15px;
+    margin: 7.5% 0 0 5%;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+
+ } .shellContent > h1 {
+    color: black;
+    margin: 0 0 .5rem 0;    
+
+ } .shellContent > span {
+    color: blueviolet;
+    margin: .5rem 0 0 0;
+ }
+.shellWindow {
+    background-color: aqua;
+    height: 100%;
+    width: 50%;
+    margin: 0 0 0 25%;
+}
