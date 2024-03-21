@@ -4,3 +4,38 @@
   padding: 2rem;
   text-align: center;
 }
+
+.walkman-container {
+  background: linear-gradient(to left, #0460D9, #0476D9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+} .top-half {
+  height: 80%;
+  display: flex;
+
+  } .tape-player {
+    width: 80%;
+
+  } .right-section {
+    background: linear-gradient(to bottom, #0460D9, #0476D9);
+    width: 20%;
+    border-left: 5px solid #F2F2F2;
+}
+
+nav {
+  background-color: #F2F2F2;
+  height: 20%;
+}
+
+/* Color Theme Swatches in Hex */
+.Walkman-1-hex { color: #595153; }
+.Walkman-2-hex { color: #F2F2F2; }
+.Walkman-3-hex { color: #0460D9; }
+.Walkman-4-hex { color: #0476D9; }
+.Walkman-5-hex { color: #0597F2; }

@@ -1,0 +1,53 @@
+.playerContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.walkmanTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 79.7%;
+    height: 79.9%;
+    display: flex;
+    flex-direction: column;
+} 
+.topHalf {
+    background-color: #0460D9;
+    width: 100%;
+    height: 12%;
+}
+.mediumHalf {
+    width: 100%;
+    height: 58%;
+    display: flex;
+    } .sidePiece{
+        background: linear-gradient(to bottom, #0460D9, #0476D9);
+        height: 100%;
+        width: 19%;
+    } .window {
+        height: 100%;
+        width: 62%;
+        background: rgb(89, 81, 83, .2);
+        border: 5px solid #595153;
+        box-shadow: inset 47px -47px 97px #4c4547,
+                    inset -47px 47px 97px #665d5f;
+}
+
+.bottomHalf {
+    background-color: #0476D9;
+    width: 100%;
+    height: 30%;
+}
+
+.walkmanLogo {
+    position: absolute;
+    top: 2.5%;
+    left: 0;
+}
+.sonyLogo {
+    position: absolute;
+    
+    height: 75%;
+}
