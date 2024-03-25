@@ -1,0 +1,7 @@
+footer {
+    background-color: #494344;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
