@@ -4,7 +4,7 @@ const Footer = () => {
 
     return(
         <footer>
-            <span>Caleb Barvo @2024</span>
+            <span>Caleb Bravo @2024</span>
         </footer>
     )
 }

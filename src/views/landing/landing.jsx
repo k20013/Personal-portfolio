@@ -1,10 +1,19 @@
 import styles from './landing.module.css';
 
-const Landing = () => {
+const Landing = ({ idiom }) => {
 
     return(
         <section className={styles.landingContainer}>
-            <h1>Landing</h1>
+
+            <div className={styles.textContainer}>
+                <h1>Caleb Santiago Bravo</h1>
+
+                { idiom === "ESP" ? <span>Desarrollador web full-stack</span>
+                    : <span>Full-stack web developer</span>
+                }
+
+            </div>
+
         </section>
     )
 }

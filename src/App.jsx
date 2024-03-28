@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react';
 
 //Importación de componentes
-import TapePlayer from './components/tape player/tape player';
 import Footer from './components/footer/footer';
 
 //Importación de Views
@@ -13,40 +12,23 @@ import Projects from './views/projects/projects';
 
 function App() {
 
-  const [ curretnSection, setCurrentSection ] = useState("Landing");
-  const sectionHandler = (section) => {
-    setCurrentSection(section);
-    setIsOpen(false);
-  }
-  const [ isOpen, setIsOpen ] = useState(false);
+  const [ idiom, setIdiom ] = useState("ESP");
 
   return (
     <>
-      <div className={`walkman-container ${isOpen ? "isOpen" : ""}`}>
 
-        <div className="top-half">
-          <div className="tape-player">
-            <TapePlayer />
-          </div>
-          <div className="right-section"></div>
-        </div>
+      <nav className='nav-bar'>
+        <button onClick={
+          () => idiom === "ESP" ? setIdiom("EN") : setIdiom("ESP")}>
+          {idiom}
+        </button>
+      </nav>
 
-        <nav>
-          <button onClick={() => sectionHandler("Landing")}>Landing</button>
-          <button onClick={() => sectionHandler("Projects")}>Projects</button>
-          <button onClick={() => sectionHandler("Formation")}>Formation</button>
-          <button onClick={() => sectionHandler("About")}>About</button>
-          <button onClick={() => setIsOpen(false)}>Close</button>
-        </nav>
-      </div>
+      <Landing idiom={idiom} />
+      <Projects idiom={idiom} />
+      <About idiom={idiom} />
+      <Formation idiom={idiom} />
 
-      { !isOpen && (<button onClick={() => setIsOpen(true)} className='menu-btn'>Menu</button>) }
-
-      { curretnSection === "Landing" && <Landing /> }
-      { curretnSection === "Projects" && <Projects /> }
-      { curretnSection === "Formation" && <Formation /> }
-      { curretnSection === "About" && <About /> }
-      
       <Footer />
     </>
   )
