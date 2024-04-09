@@ -3,19 +3,33 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.projectsContainer {
-    background-color: brown;
-    width: 70%;
-    height: 90%;
-    margin-left: 2%;
-    display: flex;
-    justify-content: center;
-    overflow-y: scroll;
+.principalContainer {
+    width: min(100%, 600px);
+    height: 600px;
+    margin: auto;
+    display: grid;
+    grid:
+        "number-one number-two" 1fr
+        "number-one number-three" 1fr
+        "number-four number-four" 1fr
+        / 1fr 0.75fr;
+    gap: 8px;
+} .principalContainer > div {
+    border-radius: 7px;
+    transition: all .2s;
+} .principalContainer > div:hover {
+    transform: scale(1.05);
 }
-.principalProjectsContainer {
-    background-color: darkgoldenrod;
-}
-.otherProjectCard {
-    background-color: blueviolet;
+.numberOne { grid-area: number-one; background-color: aqua; }
+.numberTwo { grid-area: number-two; background-color: azure; }
+.numberThree { grid-area: number-three; background-color: cadetblue; }
+.numberFour { grid-area: number-four; background-color: coral; }
+
+.githubContainer {
+    background-color: blanchedalmond;
+    width: 600px;
+    height: 100%;
 }

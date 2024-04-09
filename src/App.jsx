@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 //Importación de componentes
 import Footer from './components/footer/footer';
+import Contact from './components/contact/contact';
 
 //Importación de Views
 import About from './views/about/about';
@@ -12,22 +13,25 @@ import Projects from './views/projects/projects';
 
 function App() {
 
-  const [ idiom, setIdiom ] = useState("ESP");
+  const [ isSpanish, setIsSPanish ] = useState(true);
 
   return (
     <>
-
       <nav className='nav-bar'>
-        <button onClick={
-          () => idiom === "ESP" ? setIdiom("EN") : setIdiom("ESP")}>
-          {idiom}
-        </button>
+
+        <Contact />
+
+        <span>ESP</span>
+        <input value="is_hot" name="temperature" type="checkbox" class="ch"
+        onClick={() => isSpanish ? setIsSPanish(false) : setIsSPanish(true)} />
+        <span>ENG</span>
+
       </nav>
 
-      <Landing idiom={idiom} />
-      <Projects idiom={idiom} />
-      <About idiom={idiom} />
-      <Formation idiom={idiom} />
+      <Landing idiom={isSpanish} />
+      <Projects />
+      <About idiom={isSpanish} />
+      <Formation idiom={isSpanish} />
 
       <Footer />
     </>

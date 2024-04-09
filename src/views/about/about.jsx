@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 const About = ({ idiom }) => {
 
-    let handleIdiom = idiom === "ESP";
-
     const [ information, setInformation ] = useState("Personal description")
     /* Personal description || Work experience || About me || Hobbies  */
 
@@ -15,15 +13,15 @@ const About = ({ idiom }) => {
                 <nav>
                      
                     <button onClick={() => setInformation("Personal description")}>
-                        { handleIdiom ? "Descripción personal" : "Personal description" }
+                        { idiom ? "Descripción personal" : "Personal description" }
                     </button>
 
                     <button onClick={() => setInformation("Work experience")}>
-                        { handleIdiom ? "Experiencia laboral" : "Work experience" }
+                        { idiom ? "Experiencia laboral" : "Work experience" }
                     </button>
 
                     <button onClick={() => setInformation("About me")}>
-                        { handleIdiom ? "Sobre mí" : "About me" }
+                        { idiom ? "Sobre mí" : "About me" }
                     </button>
 
                     <button onClick={() => setInformation("Hobbies")}>
@@ -38,15 +36,15 @@ const About = ({ idiom }) => {
                 <div className={styles.informationContainer}>
 
                     { information === "Personal description" && (<section>
-                        <h1>{ handleIdiom ? "Descripción personal" : "Personal description" }</h1>
+                        <h1>{ idiom ? "Descripción personal" : "Personal description" }</h1>
                     </section>) }
 
                     { information === "Work experience" && (<section>
-                        <h1>{ handleIdiom ? "Experiencia laboral" : "Work experience" }</h1>
+                        <h1>{ idiom ? "Experiencia laboral" : "Work experience" }</h1>
                     </section>) }
 
                     { information === "About me" && (<section>
-                        <h1>{ handleIdiom ? "Sobre mí" : "About me" }</h1>
+                        <h1>{ idiom ? "Sobre mí" : "About me" }</h1>
                     </section>) }
 
                     { information === "Hobbies" && (<section>

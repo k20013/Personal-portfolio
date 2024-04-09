@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
 
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
 .landingContainer {
     background:  url(../../assets/cyberpunk-wallpaper.jpg);
     background-size: cover;
@@ -7,7 +19,7 @@
     height: 100vh;
 }
 .textContainer {
-    background: linear-gradient(to right, rgb(000, 000, 000, .9), rgb(000, 000, 000, .7), transparent);
+    background: linear-gradient(to right, rgb(0, 0, 0, .7) 60%, transparent);
     backdrop-filter: blur(2px);
     width: min(100%, 800px);
     height: 100%;
@@ -21,8 +33,10 @@
     text-wrap: wrap;
     text-align: left;
     margin: 25% 0 15% 1.5rem;
+    animation: text-focus-in 2s;
 }
 .textContainer > span {
     align-self: flex-start;
     margin: 0 0 0 1.5rem;
+    animation: text-focus-in 3s;
 }

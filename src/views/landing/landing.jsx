@@ -8,7 +8,7 @@ const Landing = ({ idiom }) => {
             <div className={styles.textContainer}>
                 <h1>Caleb Santiago Bravo</h1>
 
-                { idiom === "ESP" ? <span>Desarrollador web full-stack</span>
+                { idiom ? <span>Desarrollador web full-stack</span>
                     : <span>Full-stack web developer</span>
                 }
 

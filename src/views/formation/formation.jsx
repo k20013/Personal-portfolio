@@ -7,7 +7,7 @@ const Formation = ({ idiom }) => {
 
             <div className={styles.formationContainer}>
                 <div className={styles.skillsContainer}>
-                    <h3>{ idiom === "ESP" ? "Habilidades" : "Skills" }</h3>
+                    <h3>{ idiom ? "Habilidades" : "Skills" }</h3>
 
                     <div className={styles.filesContainer}>
 
@@ -32,7 +32,7 @@ const Formation = ({ idiom }) => {
                 </div>
 
                 <div className={styles.techFormation}>
-                    <h3>{ idiom === "ESP" ? "Formación" : "Formation" }</h3>
+                    <h3>{ idiom ? "Formación" : "Formation" }</h3>
 
                     <div className={styles.filesContainer}>
 
