@@ -4,6 +4,7 @@ import { useState } from 'react';
 //Importación de componentes
 import Footer from './components/footer/footer';
 import Contact from './components/contact/contact';
+import Repos from './components/repos/repos';
 
 //Importación de Views
 import About from './views/about/about';
@@ -30,6 +31,7 @@ function App() {
 
       <Landing idiom={isSpanish} />
       <Projects />
+      <Repos />
       <About idiom={isSpanish} />
       <Formation idiom={isSpanish} />
 
