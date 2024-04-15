@@ -1,35 +1,65 @@
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 .projectsSection {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+.personalProjectsContainer {
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
+    gap: 16px;
 }
-.principalContainer {
-    width: min(100%, 600px);
-    height: 600px;
-    margin: auto;
+.projectContainer {
+    width: 625px;
+    height: 250px;
     display: grid;
-    grid:
-        "number-one number-two" 1fr
-        "number-one number-three" 1fr
-        "number-four number-four" 1fr
-        / 1fr 0.75fr;
-    gap: 8px;
-} .principalContainer > div {
-    border-radius: 7px;
-    transition: all .2s;
-} .principalContainer > div:hover {
-    transform: scale(1.05);
+    grid: "vinyl image content" 1fr
+          / 125px auto 1fr;
+    transition: .3s;
+} 
+.iconImg {
+    height: 250px;
+    width: 250px;
+    margin: 0;
+    grid-area: image;
+    z-index: 2;
+ } .svgImg {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    grid-area: vinyl;
+    animation: rotate 4s linear infinite;
+    animation-play-state: paused;
 }
-.numberOne { grid-area: number-one; background-color: aqua; }
-.numberTwo { grid-area: number-two; background-color: azure; }
-.numberThree { grid-area: number-three; background-color: cadetblue; }
-.numberFour { grid-area: number-four; background-color: coral; }
+.content {
+    background: linear-gradient(to right, black, transparent);
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+} .content > h1 {
+    margin: 0;
+    align-self: center;
+} .content > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.projectContainer:hover {
+    transform: scale(1.05);
 
-.githubContainer {
-    background-color: blanchedalmond;
-    width: 600px;
-    height: 100%;
+} .projectContainer:hover > .svgImg {
+    animation-play-state: running;    
 }
