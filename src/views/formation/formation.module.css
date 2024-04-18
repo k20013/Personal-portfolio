@@ -4,36 +4,80 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.formationContainer {
-    background-color: darkgrey;
-    height: 618px;
+} .formationSection > div {
     width: min(100%, 1000px);
+    height: min(auto, 618px);
+    display: grid;
+    grid: "technologies" auto
+          "files" 1fr
+          / 1fr;
+    gap: 8px;
+} 
+
+.techContainer {
+    grid-area: technologies;
+    padding: 1rem;
     display: flex;
+    justify-content: space-evenly;
+
+} .auxIconsContianer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+} 
+.iconsContainer {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-} .formationContainer > div {
-    height: 100%;
+}
+.iconsContainer > img {
+    width: auto;
+    height: 50px;
+    margin: 0 .5rem 0 .5rem;
 
 }
-.skillsContainer {
-    background-color: antiquewhite;
-    width: min(100%, 382px);
-}
-.techFormation {
-    background-color: lightblue;
-    width: min(100%, 618px);
-}
+
+
 .filesContainer {
-    background-color: rosybrown;
-    width: 90%;
-    height: 80%;
-    margin: 0 5% 0 5%;
+    grid-area: files;
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
-} .filesContainer > article {
-    background-color: black;
+    padding-right: .5rem;
+} 
+.filesContainer::-webkit-scrollbar {
+    background-color: transparent;
+
+} .filesContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 50px;
+
+    } .filesContainer:hover.filesContainer::-webkit-scrollbar-thumb {
+        background-color: aliceblue;
+    }
+
+.filesContainer > a {
+    text-decoration: none;
+}
+.file {
+    height: 100px;
+    padding: 0 1rem 0 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 0 0 1rem 0;
-    border-radius: 15px;
+    justify-content: space-between;
+    transition: all .3s;
+    color: beige;
+} .file:hover {
+    background-color: beige;
+    color: black;
+} 
+.file > h1 {
+    margin: 0;
+    font-size: clamp(12px, 3vw, 70px);
+} .file > span {
+    border: 2px solid beige;
+    border-radius: 5px;
+    padding: 1rem;
+} .file:hover > span {
+    border-color: black;
 }

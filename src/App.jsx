@@ -32,8 +32,8 @@ function App() {
       <Landing idiom={isSpanish} />
       <Projects />
       <Repos />
-      <About idiom={isSpanish} />
       <Formation idiom={isSpanish} />
+      <About idiom={isSpanish} />
 
       <Footer />
     </>

@@ -1,78 +1,59 @@
 import styles from './formation.module.css';
 
-const Formation = ({ idiom }) => {
+import {
+    bootstrapIcon, cssIcon, figmaIcon,
+    gitIcon, githubIcon, htmlIcon,
+    javaScriptIcon, nodeJsIcon, postgreIcon,
+    reactIcon, sqlIcon
+} from '../../assets/icons/icons';
 
-    return(
+const Formation = () => {
+
+    return (
         <section className={styles.formationSection}>
 
-            <div className={styles.formationContainer}>
-                <div className={styles.skillsContainer}>
-                    <h3>{ idiom ? "Habilidades" : "Skills" }</h3>
+            <div>
+                <div className={styles.techContainer}>
 
-                    <div className={styles.filesContainer}>
+                    <div className={styles.iconsContainer}>
+                        <img src={htmlIcon} alt="html" />
+                        <img src={cssIcon} alt="css" />
+                        <img src={javaScriptIcon} alt="JavaScript" />
+                    </div>
 
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
+                    <div className={styles.auxIconsContianer}>
+                        <div className={styles.iconsContainer}>
+                            <img src={reactIcon} alt="react" />
+                            <img src={bootstrapIcon} alt="bootstrap" />
+                            <img src={figmaIcon} alt="figma" />
+                        </div>
 
+                        <div className={styles.iconsContainer}>
+                            <img src={nodeJsIcon} alt="nodejs" />
+                        </div>
+
+                        <div className={styles.iconsContainer}>
+                            <img src={sqlIcon} alt="sql" />
+                            <img src={postgreIcon} alt="postgre" />
+                        </div>
+
+                        <div className={styles.iconsContainer}>
+                            <img src={gitIcon} alt="git" />
+                            <img src={githubIcon} alt="gtihub" />
+                        </div>
                     </div>
 
                 </div>
 
-                <div className={styles.techFormation}>
-                    <h3>{ idiom ? "Formación" : "Formation" }</h3>
+                <div className={styles.filesContainer}>
 
-                    <div className={styles.filesContainer}>
-
-                    <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
+                    <a href="https://www.freecodecamp.org/certification/Caleb_S_Bravo/responsive-web-design"
+                        target='_blank'>
+                        <article className={styles.file}>
+                            <h1>Responsive Web Design</h1>
+                            <span>FreeCodeCamp</span>
                         </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-                        <article>
-                            <h2>Titulo</h2>
-                            <h3>Institucion</h3>
-                            <span>+</span>                            
-                        </article>
-
-                    </div>
+                    </a>
 
                 </div>
             </div>
