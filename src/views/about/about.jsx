@@ -1,56 +1,36 @@
 import styles from './about.module.css';
 import { useState } from 'react';
 
-const About = ({ idiom }) => {
+import locationIcon from '../../assets/location.svg';
 
-    const [ information, setInformation ] = useState("Personal description")
-    /* Personal description || Work experience || About me || Hobbies  */
+const About = ({ idiom }) => {
 
     return(
         <section className={styles.aboutContainer}>
 
-            <div className={styles.halfOfWalkman}>
-                <nav>
-                     
-                    <button onClick={() => setInformation("Personal description")}>
-                        { idiom ? "Descripción personal" : "Personal description" }
-                    </button>
+            <div className={styles.auxBg}></div>
 
-                    <button onClick={() => setInformation("Work experience")}>
-                        { idiom ? "Experiencia laboral" : "Work experience" }
-                    </button>
+            <div className={styles.infoContainer}>
 
-                    <button onClick={() => setInformation("About me")}>
-                        { idiom ? "Sobre mí" : "About me" }
-                    </button>
+                <div className={styles.tittleArea}>
+                    <h1>About</h1>
+                </div>
 
-                    <button onClick={() => setInformation("Hobbies")}>
-                        Hobbies
-                    </button>
+                <div className={styles.descriptionArea}>
+                    Con la ayuda y el apoyo de mi familia, me di el lujo de terminar mis estudios escolares 
+                    y elegir a que dedicarme.<br />
+                    Mi inclinación al desarrollo web fue gradual, 
+                    seguramente influenciado por mi amor a la simpleza de la complejidad 
+                    y mi fascinación por el orden.<br />
+                    Ahora quiero mostrar mi profesionalismo con mis capacidaes, conocimiento, resposanbilidad y dedicación;
+                    y mostrar mi valor personal a travéz de la convivencia y el trabajo en equipo.
+                </div>
 
-                </nav>
-            </div>
+                <div className={styles.softSkillsArea}>4</div>
 
-            <div className={styles.halfOfInformation}>
-
-                <div className={styles.informationContainer}>
-
-                    { information === "Personal description" && (<section>
-                        <h1>{ idiom ? "Descripción personal" : "Personal description" }</h1>
-                    </section>) }
-
-                    { information === "Work experience" && (<section>
-                        <h1>{ idiom ? "Experiencia laboral" : "Work experience" }</h1>
-                    </section>) }
-
-                    { information === "About me" && (<section>
-                        <h1>{ idiom ? "Sobre mí" : "About me" }</h1>
-                    </section>) }
-
-                    { information === "Hobbies" && (<section>
-                        <h1>Hobbies</h1>
-                    </section>) }
-
+                <div className={styles.ageCountryArea}>
+                    <img src={locationIcon} alt="" />
+                    <span>Buenos Aires, Argentina</span>
                 </div>
 
             </div>
