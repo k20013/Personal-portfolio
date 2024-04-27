@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 //Importación de componentes
 import Footer from './components/footer/footer';
-import Contact from './components/contact/contact';
 import Repos from './components/repos/repos';
+import Nav from './components/nav/nav';
 
 //Importación de Views
 import About from './views/about/about';
@@ -18,16 +18,7 @@ function App() {
 
   return (
     <>
-      <nav className='nav-bar'>
-
-        <Contact />
-
-        <span>ESP</span>
-        <input value="is_hot" name="temperature" type="checkbox" class="ch"
-        onClick={() => isSpanish ? setIsSPanish(false) : setIsSPanish(true)} />
-        <span>ENG</span>
-
-      </nav>
+      <Nav idiom={isSpanish} idiomHandler={() => setIsSPanish(!isSpanish)} />
 
       <Landing idiom={isSpanish} />
       <Projects />

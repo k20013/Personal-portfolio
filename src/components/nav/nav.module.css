@@ -1,0 +1,117 @@
+:root {
+    --nav-height: 150px;
+    --one-color: #0D0D0D;
+    --two-color: #593232;
+    --three-color: #657363;
+    --four-color: #758C72;
+    --five-color: #9EBF99;
+}
+
+.navBar {
+    background-color: var(--one-color);
+    color: var(--five-color);
+    position: fixed;
+    top: calc(var(--nav-height) * -1);
+    width: 80%;
+    left: 10%;
+    height: var(--nav-height);
+    border-radius: 0 0 150px 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: all .5s;
+    z-index: 999;
+}
+
+.navBar>a:link {
+    text-decoration: none;
+}
+
+.navBar>a:visited {
+    text-decoration: none;
+}
+
+@keyframes show {
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+.activeNav {
+    animation: show .5s ease-in-out;
+    top: 0;
+}
+
+.menuBtn {
+    background-color: #0D0D0D;
+    color: #9EBF99;
+    cursor: pointer;
+    position: absolute;
+    top: var(--nav-height);
+    right: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    border: none;
+}
+
+.menuBtn>svg {
+    fill: #9EBF99;
+    user-select: none;
+    margin: 0;
+    width: 25px;
+    height: auto;
+    transition: all .4s ease-out;
+}
+
+.menuBtn:hover>svg {
+    fill: #CFFBC9;
+}
+
+.navBtn {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .2s ease-out;
+    user-select: none;
+    cursor: pointer;
+}
+
+.navBtn:hover {
+    border-radius: 15px;
+    background: #0D0D0D;
+    box-shadow: -5px 5px 5px #050505,
+        5px -5px 5px #151515;
+}
+
+.navBtn>svg {
+    fill: #9EBF99;
+    height: 50px;
+    width: auto;
+    transition: all .4s ease-out;
+}
+
+.navBtn:hover>svg {
+    fill: #CFFBC9;
+}
+
+.navBtn>span {
+    color: var(--five-color);
+    transition: .2s ease-out;
+}
+
+.navBtn:hover>span {
+    color: #CFFBC9;
+}

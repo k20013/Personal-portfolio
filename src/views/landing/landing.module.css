@@ -1,42 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
-
-@keyframes text-focus-in {
-    0% {
-      filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  
-
 .landingContainer {
-    background:  url(../../assets/cyberpunk-wallpaper.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr
 }
-.textContainer {
-    background: linear-gradient(to right, rgb(0, 0, 0, .7) 60%, transparent);
-    backdrop-filter: blur(2px);
-    width: min(100%, 800px);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+
+.leftContainer {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
+} .leftContainer > h1 {
+  margin: auto 0 0 2rem;
+  text-wrap: wrap;
+  font-size: 120px;
+  font-weight: 700;
+  user-select: none;
+
+} .leftContainer > div {
+  height: 100%;
+  padding: 1rem 0 0 2rem;
+  user-select: none;
 }
-.textContainer > h1 {
-    font-family: "Wix Madefor Text", sans-serif;
-    font-weight: 400;
-    font-size: 96px;
-    text-wrap: wrap;
-    text-align: left;
-    margin: 25% 0 15% 1.5rem;
-    animation: text-focus-in 2s;
+
+.rightContainer {
+  background: url(../../assets/personal-picture.png) #758C72;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.textContainer > span {
-    align-self: flex-start;
-    margin: 0 0 0 1.5rem;
-    animation: text-focus-in 3s;
+.carrousel {
+  background-color: aliceblue;
+  width: 200px;
+  overflow: hidden;
+
+}
+
+
+/*---Dividder-------------------------*/
+.dividerBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.dividerBottom > svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 200px;
+}
+
+.dividerBottom .shapeFill {
+  fill: #657363;
 }
