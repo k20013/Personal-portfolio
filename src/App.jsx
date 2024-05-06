@@ -21,8 +21,7 @@ function App() {
       <Nav idiom={isSpanish} idiomHandler={() => setIsSPanish(!isSpanish)} />
 
       <Landing idiom={isSpanish} />
-      <Projects />
-      <Repos />
+      <Projects idiom={isSpanish} />
       <Formation idiom={isSpanish} />
       <About idiom={isSpanish} />
 

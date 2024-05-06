@@ -1,3 +1,10 @@
+/* import { 
+    bootstrapIcon, cssIcon, figmaIcon, 
+    gitIcon, githubIcon, htmlIcon, 
+    javaScriptIcon, nodeJsIcon, postgreIcon,
+    reactIcon, sqlIcon 
+} from */
+
 import bootstrap from './bootstrap.png';
 export const bootstrapIcon = bootstrap;
 
@@ -30,10 +37,3 @@ export const reactIcon = react;
 
 import sql from './sql.png';
 export const sqlIcon = sql;
-
-/* import { 
-    bootstrapIcon, cssIcon, figmaIcon, 
-    gitIcon, githubIcon, htmlIcon, 
-    javaScriptIcon, nodeJsIcon, postgreIcon,
-    reactIcon, sqlIcon 
-} from */
