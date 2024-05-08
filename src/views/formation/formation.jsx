@@ -15,32 +15,48 @@ const Formation = () => {
             <div>
                 <div className={styles.techContainer}>
 
-                    <div className={styles.iconsContainer}>
-                        <img src={htmlIcon} alt="html" />
-                        <img src={cssIcon} alt="css" />
-                        <img src={javaScriptIcon} alt="JavaScript" />
+                    <div> {/* Basico */}
+                        <span title='HTML'>
+                            <img src={htmlIcon} alt="html icon" />
+                        </span>
+                        <span title='CSS'>
+                            <img src={cssIcon} alt="css icon" />
+                        </span>
+                        <span title='JavaScript'>
+                            <img src={javaScriptIcon} alt="JavaScript icon" />
+                        </span>
                     </div>
-
-                    <div className={styles.auxIconsContianer}>
-                        <div className={styles.iconsContainer}>
-                            <img src={reactIcon} alt="react" />
-                            <img src={bootstrapIcon} alt="bootstrap" />
-                            <img src={figmaIcon} alt="figma" />
-                        </div>
-
-                        <div className={styles.iconsContainer}>
-                            <img src={nodeJsIcon} alt="nodejs" />
-                        </div>
-
-                        <div className={styles.iconsContainer}>
-                            <img src={sqlIcon} alt="sql" />
-                            <img src={postgreIcon} alt="postgre" />
-                        </div>
-
-                        <div className={styles.iconsContainer}>
-                            <img src={gitIcon} alt="git" />
-                            <img src={githubIcon} alt="gtihub" />
-                        </div>
+                    <div> {/* Frontend */}
+                        <span title='React'>
+                            <img src={reactIcon} alt="react icon" />
+                        </span>
+                        <span title='Bootstrap'>
+                            <img src={bootstrapIcon} alt="bootstrap icon" />
+                        </span>
+                        <span title='Figma'>
+                            <img src={figmaIcon} alt="figma icon" />
+                        </span>
+                    </div>
+                    <div> {/* Backend */}
+                        <span title='Node JS'>
+                            <img src={nodeJsIcon} alt="nodejs icon" />
+                        </span>
+                    </div>
+                    <div> {/* Base de datos */}
+                        <span title='SQL Databases'>
+                            <img src={sqlIcon} alt="sql icon" />
+                        </span>
+                        <span title='Postgre'>
+                            <img src={postgreIcon} alt="postgre icon" />
+                        </span>
+                    </div>
+                    <div> {/* Otro */}
+                        <span title='Git'>
+                            <img src={gitIcon} alt="git icon" />
+                        </span>
+                        <span title='Github'>
+                            <img src={githubIcon} alt="gtihub icon" />
+                        </span>
                     </div>
 
                 </div>
@@ -49,7 +65,7 @@ const Formation = () => {
 
                     <a href="https://www.freecodecamp.org/certification/Caleb_S_Bravo/responsive-web-design"
                         target='_blank'>
-                        <article className={styles.file}>
+                        <article className={`${styles.file} ${styles.hardSkill}`}>
                             <h1>Responsive Web Design</h1>
                             <span>FreeCodeCamp</span>
                         </article>
