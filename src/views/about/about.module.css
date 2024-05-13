@@ -1,46 +1,51 @@
-.aboutContainer {
+.aboutSection {
+    background: linear-gradient(#758C72, #9EBF99);
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: end;
-
-} .auxBg {
-    background: url(../../assets/telecaster-inclinada.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    margin: 0 0 0 1rem;
-    height: 100%;
-    width: 715px;
-} 
-.infoContainer {
-    width: 100%;
-    height: 100%;
     display: grid;
-    grid: "tittle tittle" auto
-          "soft-skills description" 1fr
-          "soft-skills age-country" auto
-          / 1fr 1fr;
-    gap: 0;
+    grid-template-rows: 100vh 100vh;
 }
-.tittleArea { grid-area: tittle; }
 
-.descriptionArea { 
-    grid-area: description;
-    padding: 1rem;
+.infoContainer {
+    background-color: rgb(0, 0, 0);
+    width: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    font-size: 24px;
 }
 
-.ageCountryArea {
-    grid-area: age-country;
+.infoContainer>a {
+    text-decoration: none;
+}
+
+.cvBtn {
+    background-color: aliceblue;
+    color: black;
+    width: 200px;
+    height: 75px;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.infoContainer>div {
+    color: #9EBF99;
+    width: 500px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contentContainer {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
-
-} .ageCountryArea > span {
-    font-size: 24px;
 }
 
-.softSkillsArea { grid-area: soft-skills; }
+.contentCard {
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 50%;
+    height: 500px;
+}

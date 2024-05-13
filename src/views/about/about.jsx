@@ -1,41 +1,52 @@
 import styles from './about.module.css';
-import { useState } from 'react';
-
-import locationIcon from '../../assets/location.svg';
 
 const About = ({ idiom }) => {
 
-    return(
-        <section className={styles.aboutContainer}>
-
-            <div className={styles.auxBg}></div>
+    return (
+        <section className={styles.aboutSection}>
 
             <div className={styles.infoContainer}>
-
-                <div className={styles.tittleArea}>
-                    <h1>About</h1>
+                <a href="">
+                    <div className={styles.cvBtn}>
+                        <span>Ver CV</span>
+                    </div>
+                </a>
+                <div>
+                    <p>
+                        Con la ayuda y el apoyo de mi familia, me di el lujo de terminar mis estudios escolares
+                        y elegir a que dedicarme.<br />
+                        Mi inclinación al desarrollo web fue gradual,
+                        seguramente influenciado por mi amor a la simpleza de la complejidad
+                        y mi fascinación por el orden.<br />
+                        Ahora quiero mostrar mi profesionalismo con mis capacidaes, conocimiento, resposanbilidad y dedicación;
+                        y mostrar mi valor personal a travéz de la convivencia y el trabajo en equipo.
+                    </p>
                 </div>
+            </div>
 
-                <div className={styles.descriptionArea}>
-                    Con la ayuda y el apoyo de mi familia, me di el lujo de terminar mis estudios escolares 
-                    y elegir a que dedicarme.<br />
-                    Mi inclinación al desarrollo web fue gradual, 
-                    seguramente influenciado por mi amor a la simpleza de la complejidad 
-                    y mi fascinación por el orden.<br />
-                    Ahora quiero mostrar mi profesionalismo con mis capacidaes, conocimiento, resposanbilidad y dedicación;
-                    y mostrar mi valor personal a travéz de la convivencia y el trabajo en equipo.
-                </div>
+            <div className={styles.contentContainer}>
+                <article className={`${styles.contentCard}`}>
+                    <code>
+                        
+                    </code>
+                </article>
 
-                <div className={styles.softSkillsArea}>4</div>
+                <article className={`${styles.contentCard}`}>
 
-                <div className={styles.ageCountryArea}>
-                    <img src={locationIcon} alt="" />
-                    <span>Buenos Aires, Argentina</span>
-                </div>
-
+                </article>
             </div>
 
         </section>
     )
 }
 export default About
+
+/*
+    Con la ayuda y el apoyo de mi familia, me di el lujo de terminar mis estudios escolares 
+                    y elegir a que dedicarme.<br />
+                    Mi inclinación al desarrollo web fue gradual, 
+                    seguramente influenciado por mi amor a la simpleza de la complejidad 
+                    y mi fascinación por el orden.<br />
+                    Ahora quiero mostrar mi profesionalismo con mis capacidaes, conocimiento, resposanbilidad y dedicación;
+                    y mostrar mi valor personal a travéz de la convivencia y el trabajo en equipo.
+*/
