@@ -1,16 +1,16 @@
 import './App.css';
 import { useState } from 'react';
 
-//Importación de componentes
-import Footer from './components/footer/footer';
-import Repos from './components/repos/repos';
-import Nav from './components/nav/nav';
+import Landing from './components/landing/landing';
 
-//Importación de Views
-import About from './views/about/about';
-import Formation from './views/formation/formation';
-import Landing from './views/landing/landing';
-import Projects from './views/projects/projects';
+//Importación de componentes
+import Nav from './components/nav/nav';
+import Footer from './components/footer/footer';
+//import GithubAdd from './components/github add/github add';
+//import Projects from './components/projects/projects';
+//import Backstory from './components/backstory/backstory';
+//import { BasicTech, FrontendTech, BackendTech, DatabaseTech } from './components/technologies/technologies';
+//import Formation from './components/formation/formation';
 
 function App() {
 
@@ -21,9 +21,10 @@ function App() {
       <Nav idiom={isSpanish} idiomHandler={() => setIsSPanish(!isSpanish)} />
 
       <Landing idiom={isSpanish} />
-      <Projects idiom={isSpanish} />
-      <Formation idiom={isSpanish} />
-      <About idiom={isSpanish} />
+      
+      <div className='contentContainer'>
+
+      </div>
 
       <Footer />
     </>

@@ -1,21 +1,31 @@
 :root {
-    --color-one: #9EBF99;
-    --color-two: #0D0D0D;
+    --one-color: #0D0D0D;
+    --two-color: #593232;
+    --three-color: #657363;
+    --four-color: #758C72;
+    --five-color: #9EBF99;
 }
 
 .projectContainer {
-    color: var(--color-one);
+    color: var(--five-color);
     width: 100%;
     height: 100%;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr auto;
+    gap: 1rem;
+}
+
+.projectContainer>div {
+    background: linear-gradient(#412525, #593232);
 }
 
 .oneAuxContainer {
+    border-radius: 50px 0 0 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     text-align: center;
     padding: 0 1.5rem 0 1.5rem;
 }
@@ -29,25 +39,52 @@
     font-size: clamp(20px, 2vw, 40px);
 }
 
-.iconsContainer {
-    padding: 1rem 0 1rem 0;
+.prevNext {
+    width: 250px;
+    height: 75px;
+    border-radius: 50px;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    overflow: hidden;
+    user-select: none;
 }
 
-.iconsContainer>img {
-    width: auto;
-    height: 50px;
-    margin: 0;
+.prevNext>div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
 }
+
+.prevNext>div>svg {
+    height: 50px;
+    width: auto;
+    fill: var(--five-color);
+}
+
+.prevNext>div:hover {
+    background-color: var(--five-color);
+}
+
+.prevNext>div:hover>svg {
+    fill: var(--one-color);
+}
+
+/*-----------------------------------*/
 
 .twoAuxContainer {
+    position: relative;
+    top: 2.5rem;
+    width: 400px;
+    border-radius: 0 0 50px 0;
     padding: 0 0 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .imgContainer {
@@ -101,50 +138,15 @@
 }
 
 .linksContainer>a>div:hover {
-    background-color: var(--color-one);
+    background-color: var(--five-color);
 }
 
 .linksContainer>a>div>svg {
     width: auto;
     height: 50px;
-    fill: var(--color-one);
+    fill: var(--five-color);
 }
 
 .linksContainer>a>div:hover>svg {
-    fill: var(--color-two);
-}
-
-.prevNext {
-    width: 250px;
-    height: 75px;
-    border-radius: 50px;
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-
-}
-
-.prevNext>div {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-
-}
-
-.prevNext>div>svg {
-    height: 50px;
-    width: auto;
-    fill: var(--color-one);
-}
-
-.prevNext>div:hover {
-    background-color: var(--color-one);
-}
-
-.prevNext>div:hover>svg {
-    fill: var(--color-two);
+    fill: var(--one-color);
 }

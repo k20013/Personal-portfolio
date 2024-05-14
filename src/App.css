@@ -1,3 +1,18 @@
 #root {
   margin: 0;
+  --one-color: #0D0D0D;
+  --two-color: #593232;
+  --three-color: #657363;
+  --four-color: #758C72;
+  --five-color: #9EBF99;
+}
+
+.contentContainer {
+  background-color: var(--three-color);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

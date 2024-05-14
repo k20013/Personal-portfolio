@@ -1,0 +1,27 @@
+:root {
+    --one-color: #0D0D0D;
+    --two-color: #593232;
+    --three-color: #657363;
+    --four-color: #758C72;
+    --five-color: #9EBF99;
+}
+
+.backstory {
+    background-color: var(--one-color);
+    color: #9EBF99;
+    width: 700px;
+    height: 400px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.backstory>p {
+    width: 90%;
+}
+.backstory>p>hr {
+    border-color: var(--three-color);
+}

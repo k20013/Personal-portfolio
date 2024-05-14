@@ -1,0 +1,19 @@
+.tech {
+    background-color:#593232;
+    height: 100px;
+    width: auto;
+    padding: 0 25px 0 25px;
+    border-radius: 50px;
+    border: 2px #3B2121 solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+.tech>span>img {
+    user-select: none;
+    width: auto;
+    height: 50px;
+    margin: 0;
+}
