@@ -7,12 +7,17 @@
   --five-color: #9EBF99;
 }
 
+a {
+  text-decoration: none;
+}
+
 .contentContainer {
   background-color: var(--three-color);
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
+  height: auto;
+  padding: 25vh 0 25vh 0;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
 }

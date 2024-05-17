@@ -1,7 +1,67 @@
-.contentContainer {
+.projects {
     height: 500px;
     width: 809px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+}
+
+.project {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    width: 809px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.content {
+    background: linear-gradient(to bottom, black, rgb(0, 0, 0, .5));
+    color: #CFFBC9;
+    position: relative;
+    bottom: 150px;
+    height: 250px;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    padding: 0 2rem 0 2rem;
+    display: grid;
+    grid: "description btn" 1fr "name btn" auto / 1fr auto;
+    gap: 2rem;
+    transition: all .6s ease-out;
+}
+
+.content:hover {
+    bottom: 0;
+}
+
+.content>h1 {
+    grid-area: name;
+    align-self: flex-start;
+    font-size: 60px;
+    margin: 2rem 1rem 1rem 0;
+}
+
+.content>p {
+    grid-area: description;
+    font-size: clamp(16px, 2vw, 60px);
+    margin: 3rem 0 0 0;
+}
+
+.content>a {
+    grid-area: btn;
+    margin: 50px 75px 0 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    align-self: flex-start;
+}
+
+.githubBTN {
+    background-color: #9EBF99;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    transition: all .3s ease-out;
+}
+
+.content>a:hover .githubBTN {
+    background-color: #CFFBC9;
 }
