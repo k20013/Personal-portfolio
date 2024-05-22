@@ -9,7 +9,7 @@ import Footer from './components/footer/footer';
 import GithubAdd from './components/github add/github add';
 import Projects from './components/projects/projects';
 import Backstory from './components/backstory/backstory';
-import { BasicTech, FrontendTech, BackendTech, DatabaseTech } from './components/technologies/technologies';
+import Technologies from './components/technologies/technologies';
 import Formation from './components/formation/formation';
 
 function App() {
@@ -24,9 +24,17 @@ function App() {
 
       <div className='contentContainer'>
 
+        <div className='aux-div'>
+          <Projects idiom={isSpanish} />
+          <GithubAdd idiom={isSpanish} />
+        </div>
 
-        <Projects idiom={isSpanish} />
+        <Formation />
 
+        <div className='aux-div'>
+          <Technologies />
+          <Backstory idiom={isSpanish} />
+        </div>
 
       </div>
 
@@ -36,13 +44,3 @@ function App() {
 }
 
 export default App
-
-/*
-<GithubAdd />
-<Backstory />
-        <BasicTech />
-        <FrontendTech />
-        <BackendTech />
-        <DatabaseTech />
-        <Formation />
-*/

@@ -28,11 +28,11 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.carrousel {
-  background-color: aliceblue;
-  width: 200px;
-  overflow: hidden;
 
+.specialization {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
 
 
