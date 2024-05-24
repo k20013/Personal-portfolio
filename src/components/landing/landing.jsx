@@ -31,11 +31,7 @@ const Landing = ({ idiom }) => {
 
             </div>
 
-            <div className={styles.rightContainer}>
-
-
-
-            </div>
+            <div className={styles.rightContainer}></div>
 
         </section>
     )
