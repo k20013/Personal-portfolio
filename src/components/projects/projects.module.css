@@ -1,6 +1,6 @@
 .projects {
     height: 500px;
-    width: 809px;
+    width: min(809px, 85%);
 }
 
 .project {
@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    width: 809px;
+    width: 100%;
     border-radius: 50px;
     overflow: hidden;
 }
@@ -23,7 +23,9 @@
     border-radius: 50px 50px 0 0;
     padding: 0 2rem 0 2rem;
     display: grid;
-    grid: "description btn" 1fr "name btn" auto / 1fr auto;
+    grid: "description btn" 1fr 
+          "name btn" auto 
+          / 1fr auto;
     gap: 2rem;
     transition: all .6s ease-out;
 }
@@ -36,13 +38,14 @@
     grid-area: name;
     align-self: flex-start;
     font-size: 60px;
-    margin: 2rem 1rem 1rem 0;
+    margin: 1.5rem 1rem 1rem 0;
 }
 
 .content>p {
     grid-area: description;
-    font-size: clamp(16px, 2vw, 60px);
-    margin: 3rem 0 0 0;
+    font-size: clamp(24px, 2vw, 60px);
+    margin: 2.5rem 0 0 0;
+    text-wrap: wrap;
 }
 
 .content>a {
@@ -64,4 +67,26 @@
 
 .content>a:hover .githubBTN {
     background-color: #CFFBC9;
+}
+
+@media (max-width: 400px) {
+
+    .content>p {
+        height: 75px;
+        opacity: 0;
+    }
+
+    .content:hover.content>p {
+        opacity: 1;
+    }
+
+    .content>a {
+        height: 75px;
+        width: 75px;
+    }
+
+    .githubBTN {
+        height: 75px;
+        width: 75px;
+    }
 }
