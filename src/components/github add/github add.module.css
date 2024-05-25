@@ -43,3 +43,21 @@
     background-color: #4B5DFC;
     color: #FFFF;
 }
+
+@media (max-width: 800px) {
+
+    .info {
+        width: 75%;
+        height: 250px;
+        margin: 5rem 0 0 0;
+        padding: 2rem 0 2rem 0;
+    }
+
+    .info>a {
+        width: 75%;
+    }
+
+    .info>a>div {
+        width: 100%;
+    }
+}
