@@ -1,16 +1,9 @@
-:root {
-    --one-color: #0D0D0D;
-    --two-color: #593232;
-    --three-color: #657363;
-    --four-color: #758C72;
-    --five-color: #9EBF99;
-}
-
 .backstory {
-    background-color: var(--one-color);
+    background-color: rgb(13, 13, 13, .5);
     color: #9EBF99;
-    width: 700px;
-    height: 400px;
+    width: min(800px, 100%);
+    height: 100%;
+    padding: 2.5rem 0 2.5rem 0;
     border-radius: 25px;
     display: flex;
     justify-content: center;
@@ -24,4 +17,14 @@
 }
 .backstory>p>hr {
     border-color: var(--three-color);
+}
+
+@media (max-width: 800px) {
+    .backstory {
+        border-radius: 0;
+    }
+
+    .backstory>p {
+        width: 75%;
+    }
 }
