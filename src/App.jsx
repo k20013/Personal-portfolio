@@ -5,7 +5,6 @@ import Landing from './components/landing/landing';
 
 //Importación de componentes
 import Nav from './components/nav/nav';
-import Footer from './components/footer/footer';
 import GithubAdd from './components/github add/github add';
 import Projects from './components/projects/projects';
 import Backstory from './components/backstory/backstory';
@@ -14,7 +13,7 @@ import Formation from './components/formation/formation';
 
 function App() {
 
-  const [isSpanish, setIsSPanish] = useState(true);
+  const [isSpanish, setIsSPanish] = useState(false);
 
   return (
     <>
@@ -38,7 +37,9 @@ function App() {
 
       </div>
 
-      <Footer />
+      <footer>
+        <span>© 2024 Caleb Bravo</span>
+      </footer>
     </>
   )
 }
