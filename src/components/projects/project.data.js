@@ -1,4 +1,4 @@
-import oneStepMore from '../../assets/projects images/one-step-more.jpg';
+import oneStepMore from '../../assets/projects images/one-stp-more.PNG';
 
 export default [
     {
