@@ -1,4 +1,4 @@
-import oneStepMore from '../../assets/projects images/one-stp-more.PNG';
+import oneStepMore from '../../assets/projects images/one-step-more.jpg';
 
 export default [
     {
@@ -10,5 +10,13 @@ export default [
         img: oneStepMore,
         linkToWebsite: "https://one-step-more.vercel.app/",
         linkToGithub: "https://github.com/k20013/one-step-more"
+    },
+    {
+        name: "Portfolio",
+        description: {
+            esp: "Este mismo portafolio.",
+            en: "This portfolio."
+        },
+        linkToGithub: "https://github.com/k20013/Personal-portfolio"
     }
 ];
