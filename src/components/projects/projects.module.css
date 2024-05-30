@@ -9,83 +9,105 @@
     background-size: cover;
     height: 500px;
     width: 100%;
-    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 .content {
-    background: linear-gradient(to bottom, black, rgb(0, 0, 0, .5));
+    background: linear-gradient(to bottom, #0D0D0D, rgb(13, 13, 13, .6));
+    backdrop-filter: blur(5px);
     color: #CFFBC9;
-    position: relative;
-    bottom: 150px;
-    height: 250px;
-    width: 100%;
-    border-radius: 50px 50px 0 0;
-    padding: 0 2rem 0 2rem;
+    width: 90%;
+    height: 90%;
+    border-radius: 25px 0 25px 0;
     display: grid;
-    grid: "description btn" 1fr 
-          "name btn" auto 
-          / 1fr auto;
-    gap: 2rem;
+    grid-template-rows: auto 1fr;
     transition: all .6s ease-out;
 }
 
 .content:hover {
-    bottom: 0;
+    background-color: rgb(13, 13, 13, .7);
 }
 
-.content>h1 {
-    grid-area: name;
-    align-self: flex-start;
+.topContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.topContainer>h1 {
     font-size: 60px;
-    margin: 1.5rem 1rem 1rem 0;
+    margin: 2rem 0 2rem 2rem;
 }
 
-.content>p {
-    grid-area: description;
+.bottomContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomContainer>p {
+    width: 90%;
     font-size: clamp(24px, 2vw, 60px);
-    margin: 2.5rem 0 0 0;
     text-wrap: wrap;
+    text-align: center;
 }
 
-.content>a {
-    grid-area: btn;
-    margin: 50px 75px 0 0;
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    align-self: flex-start;
+.buttonsContainer {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.githubBTN {
+.projectButton {
     background-color: #9EBF99;
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    min-width: 100px;
+    width: auto;
+    height: auto;
+    padding: .5rem;
+    border-radius: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: .5rem;
     transition: all .3s ease-out;
 }
 
-.content>a:hover .githubBTN {
+.projectButton>svg {
+    width: 25px;
+    height: auto;
+}
+
+.projectButton>span {
+    color: #0D0D0D;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.projectButton:hover {
     background-color: #CFFBC9;
 }
 
 @media (max-width: 400px) {
 
-    .content>p {
-        height: 75px;
-        opacity: 0;
+    .buttonsContainer {
+        gap: 3px;
     }
 
-    .content:hover.content>p {
-        opacity: 1;
+    .leftBtn {
+        border-radius: 25px 0 0 25px;
     }
 
-    .content>a {
-        height: 75px;
-        width: 75px;
+    .rightBtn {
+        border-radius: 0 25px 25px 0;
     }
 
-    .githubBTN {
+    .projectButton {
         height: 75px;
         width: 75px;
     }

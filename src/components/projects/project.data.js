@@ -1,44 +1,14 @@
-import iconDawn from '../../assets/lorem-waifus/Dawn.jpg';
-import iconNami from '../../assets/lorem-waifus/Nami.jpg';
-import iconRukia from '../../assets/lorem-waifus/Rukia.jpg';
-import iconSonia from '../../assets/lorem-waifus/Sonia.jpg';
+import oneStepMore from '../../assets/projects images/one-stp-more.PNG';
 
 export default [
     {
-        name: "Dawn",
+        name: "One step more",
         description: {
-            esp: "De Pokemón.",
-            en: "From Pokemon."
+            esp: "Un grafico que ilustra el tiempo de vida, medido en semanas, durante un periodo minimo de 80 años.",
+            en: "A graph illustrating lifespan, measured in weeks, over a minimum period of 80 years."
         },
-        img: iconDawn,
-        linkToWebsite: "#",
-        linkToGithub: "https://github.com"
-    },{
-        name: "Nami",
-        description: {
-            esp: "La gata ladrona, navegante del rey de los piratas. De One piece",
-            en: "The bunglar cat, the pirate's king's navigate. From One piece"
-        },
-        img: iconNami,
-        linkToWebsite: "#",
-        linkToGithub: "https://github.com"
-    },{
-        name: "Rukia",
-        description: {
-            esp: "Una shinigami. De Bleach",
-            en: "A shinigami. From Bleach"
-        },
-        img: iconRukia,
-        linkToWebsite: "#",
-        linkToGithub: "https://github.com"
-    },{
-        name: "Sonia",
-        description: {
-            esp: "Una waifu de Pokemón.",
-            en: "A prestigious investigater from Pokemon."
-        },
-        img: iconSonia,
-        linkToWebsite: "#",
-        linkToGithub: "https://github.com"
+        img: oneStepMore,
+        linkToWebsite: "https://one-step-more.vercel.app/",
+        linkToGithub: "https://github.com/k20013/one-step-more"
     }
 ];
